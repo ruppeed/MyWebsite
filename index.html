@@ -3,327 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timetable and GCSEs</title>
+    <title>Weekly Timetable</title>
     <style>
-        table, th, td {
-            border: 1px solid black;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .timetable {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /* 6 columns for Monday to Saturday */
+            gap: 10px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .day {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .day h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .event {
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #f1f1f1;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .event strong {
+            display: block;
+            font-size: 12px;
+            color: #777;
+        }
+        .event span {
+            display: block;
+            font-size: 14px;
+            color: #333;
+        }
+        .gcse {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .gcse h2 {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .gcse table {
+            width: 100%;
             border-collapse: collapse;
+        }
+        .gcse th, .gcse td {
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
-        th {
+        .gcse th {
             background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <h1>Weekly Timetable</h1>
-    <table style="width:80%; margin-bottom: 20px;">
-        <thead>
-            <tr>
-                <th>Day</th>
-                <th>Period</th>
-                <th>Time</th>
-                <th>Subject</th>
-                <th>Location</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Monday -->
-            <tr>
-                <td rowspan="13">Monday</td>
-                <td>Period 1</td>
-                <td>09:00 - 09:35</td>
-                <td>Supervised Study</td>
-                <td>Library</td>
-                <td></td>   
-            </tr>
-            
-            <tr>
-                <td>Period 2</td>
-                <td>09:00 - 09:35</td>
-                <td>Supervised Study</td>
-                <td>Library</td>
-            </tr>
-            <tr>
-                <td>Period 3</td>
-                <td>10:50 - 11:25</td>
-                <td>English</td>
-                <td>115</td>
-            </tr>
-            <tr>
-                <td>Period 4</td>
-                <td>11:25 - 12:00</td>
-                <td>English</td>
-                <td>115</td>
-            </tr>
-            <tr>
-                <td>Period 5</td>
-                <td>12:05 - 12:20</td>
-                <td>Biology</td>
-                <td>Lab 5</td>
-            </tr>
-            <tr>
-                <td>Period 6</td>
-                <td>13:15 - 13:55</td>
-                <td>Chemistry</td>
-                <td>Senior Science Block</td>
-            </tr>
-            <tr>
-                <td>Period 7</td>
-                <td>13:15 - 13:55</td>
-                <td>Mandarin</td>
-                <td>210</td>
-            </tr>
-            <tr>
-                <td>Period 8</td>
-                <td>14:30 - 15:05</td>
-                <td>Mandarin</td>
-                <td>210</td>
-            </tr>
-            <tr>
-                <td>Badley Time</td>
-                <td>15:05 - 16:05</td>
-                <td>Orchestra</td>
-                <td>Assembly Hall</td>
-            </tr>
-            <tr>
-                <td>Period 9</td>
-                <td>16:20 - 16:55</td>
-                <td>Physics</td>
-                <td>Lab 4</td>
-            </tr>
-            <tr>
-                <td>Period 10</td>
-                <td>16:55 - 17:30</td>
-                <td>Physics</td>
-                <td>Lab 4</td>
-            </tr>
-            <tr>
-                <td>Assembly</td>
-                <td>17:30 - 18:00</td>
-                <td>Whole School Assembly and Notices</td>
-                <td>Senior Assembly Hall</td>
-            </tr>
-            <tr>
-                <td>Powell Time</td>
-                <td>19:00 - 20:15</td>
-                <td>Supervised Study</td>
-                <td>210</td>
-            </tr>
-            <!-- Tuesday -->
-            <tr>
-                <td rowspan="6">Tuesday</td>
-                <td>Period 1</td>
-                <td>09:00 - 09:35</td>
-                <td>Geography</td>
-                <td>Global Centre</td>
-            </tr>
-            <tr>
-                <td>Period 2</td>
-                <td>09:35 - 10:10</td>
-                <td>Biology</td>
-                <td>Lab7 - Senior</td>
-            </tr>
-            <tr>
-                <td>Period 3</td>
-                <td>10:15 - 10:50</td>
-                <td>Global Perspective</td>
-                <td>Room 101</td>
-            </tr>
-            <tr>
-                <td>Period 4</td>
-                <td>10:55 - 11:30</td>
-                <td>Mandarin</td>
-                <td>Language Block</td>
-            </tr>
-            <tr>
-                <td>Period 5</td>
-                <td>11:35 - 12:10</td>
-                <td>Digital Game Design</td>
-                <td>IT Suite</td>
-            </tr>
-            <tr>
-                <td>Period 6</td>
-                <td>12:15 - 12:50</td>
-                <td>Computer Science</td>
-                <td>IT Suite</td>
-            </tr>
-            <tr>
-              <td rowspan="6">Wednesday</td>
-              <td>Period 1</td>
-              <td>09:00 - 09:35</td>
-              <td>Chemistry</td>
-              <td>Lab1 - Senior</td>
-          </tr>
-          <tr>
-              <td>Period 2</td>
-              <td>09:35 - 10:10</td>
-              <td>Physics</td>
-              <td>Lab2 - Senior</td>
-          </tr>
-          <tr>
-              <td>Period 3</td>
-              <td>10:15 - 10:50</td>
-              <td>Mathematics</td>
-              <td>Main Building</td>
-          </tr>
-          <tr>
-              <td>Period 4</td>
-              <td>10:55 - 11:30</td>
-              <td>Biology</td>
-              <td>Lab7 - Senior</td>
-          </tr>
-          <tr>
-              <td>Period 5</td>
-              <td>11:35 - 12:10</td>
-              <td>English Language</td>
-              <td>Main Building</td>
-          </tr>
-          <tr>
-              <td>Period 6</td>
-              <td>12:15 - 12:50</td>
-              <td>Global Perspective</td>
-              <td>Room 101</td>
-          </tr>
-          <tr>
-            <td rowspan="6">Thursday</td>
-            <td>Period 1</td>
-            <td>09:00 - 09:35</td>
-            <td>Mandarin</td>
-            <td>Language Block</td>
-        </tr>
-        <tr>
-            <td>Period 2</td>
-            <td>09:35 - 10:10</td>
-            <td>Digital Game Design</td>
-            <td>IT Suite</td>
-        </tr>
-        <tr>
-            <td>Period 3</td>
-            <td>10:15 - 10:50</td>
-            <td>Computer Science</td>
-            <td>IT Suite</td>
-        </tr>
-        <tr>
-            <td>Period 4</td>
-            <td>10:55 - 11:30</td>
-            <td>Geography</td>
-            <td>G2 - Senior</td>
-        </tr>
-        <tr>
-            <td>Period 5</td>
-            <td>11:35 - 12:10</td>
-            <td>Chemistry</td>
-            <td>Lab1 - Senior</td>
-        </tr>
-        <tr>
-            <td>Period 6</td>
-            <td>12:15 - 12:50</td>
-            <td>Physics</td>
-            <td>Lab2 - Senior</td>
-        </tr>
-        <tr>
-          <td rowspan="6">Friday</td>
-          <td>Period 1</td>
-          <td>09:00 - 09:35</td>
-          <td>Biology</td>
-          <td>Lab7 - Senior</td>
-      </tr>
-      <tr>
-          <td>Period 2</td>
-          <td>09:35 - 10:10</td>
-          <td>English Language</td>
-          <td>Main Building</td>
-      </tr>
-      <tr>
-          <td>Period 3</td>
-          <td>10:15 - 10:50</td>
-          <td>Mandarin</td>
-          <td>Language Block</td>
-      </tr>
-      <tr>
-          <td>Period 4</td>
-          <td>10:55 - 11:30</td>
-          <td>Global Perspective</td>
-          <td>Room 101</td>
-      </tr>
-      <tr>
-          <td>Period 5</td>
-          <td>11:35 - 12:10</td>
-          <td>Digital Game Design</td>
-          <td>IT Suite</td>
-      </tr>
-      <tr>
-          <td>Period 6</td>
-          <td>12:15 - 12:50</td>
-          <td>Computer Science</td>
-          <td>IT Suite</td>
-      </tr>
-      <tr>
-        <td rowspan="3">Saturday</td>
-        <td>Period 1</td>
-        <td>09:00 - 09:45</td>
-        <td>Sports Practice</td>
-        <td>Sports Field</td>
-    </tr>
-    <tr>
-        <td>Period 2</td>
-        <td>09:50 - 10:35</td>
-        <td>Drama</td>
-        <td>Theatre</td>
-    </tr>
-    <tr>
-        <td>Period 3</td>
-        <td>10:40 - 11:25</td>
-        <td>Art</td>
-        <td>Art Studio</td>
-    </tr>    
-        </tbody>
-    </table>
+    <div class="timetable">
+        <!-- Monday -->
+        <div class="day">
+            <h2>Monday</h2>
+            <div class="event">
+                <strong>9 AM</strong>
+                <span>Supervised Study(G2)</span>
+            </div>
+            <div class="event">
+                <strong>10:50AM</strong>
+                <span>English</span>
+            </div>
+            <div class="event">
+                <strong>12:05</strong>
+                <span>Biology</span>
+            </div>
+            <div class="event">
+                <strong>13:15</strong>
+                <span>Chemistry (Lab5)</span>
+            </div>
+            <div class="event">
+                <strong>13:55</strong>
+                <span>Mandarin</span>
+            </div>
+            <div class="event">
+                <strong>15:05</strong>
+                <span>Badley - Orchestra</span>
+            </div>
+            <div class="event">
+                <strong>16:20</strong>
+                <span>Physics</span>
+            </div>
+            <div class="event">
+                <strong>17:30</strong>
+                <span>Whole School Assembly</span>
+            </div>
+        </div>
+        <!-- Tuesday -->
+        <div class="day">
+            <h2>Tuesday</h2>
+            <div class="event">
+                <strong>9 AM</strong>
+                <span>Supervised</span>
+            </div>
+            <div class="event">
+                <strong>10 AM</strong>
+                <span>Mathematics (114)</span>
+            </div>
+            <div class="event">
+                <strong>11 AM</strong>
+                <span>Supervised Study (Goldie)</span>
+            </div>
+            <div class="event">
+                <strong>12 PM</strong>
+                <span>Chemistry (Lab1)</span>
+            </div>
+            <div class="event">
+                <strong>1 PM</strong>
+                <span>Block 4</span>
+            </div>
+            <div class="event">
+                <strong>2 PM</strong>
+                <span>Physics (Lab4)</span>
+            </div>
+            <div class="event">
+                <strong>3 PM</strong>
+                <span>Friday JAW</span>
+            </div>
+            <div class="event">
+                <strong>4 PM</strong>
+                <span>Mathematics (018)</span>
+            </div>
+            <div class="event">
+                <strong>5 PM</strong>
+                <span>Supervised Study (209)</span>
+            </div>
+        </div>
+        <!-- Wednesday -->
+        <div class="day">
+            <h2>Wednesday</h2>
+            <div class="event">
+                <strong>9 AM</strong>
+                <span>Chemistry (Lab1)</span>
+            </div>
+            <div class="event">
+                <strong>10 AM</strong>
+                <span>English (115)</span>
+            </div>
+            <div class="event">
+                <strong>11 AM</strong>
+                <span>Biology (Lab7)</span>
+            </div>
+            <div class="event">
+                <strong>12 PM</strong>
+                <span>Block 4</span>
+            </div>
+            <div class="event">
+                <strong>1 PM</strong>
+                <span>Chemistry (Lab8)</span>
+            </div>
+            <div class="event">
+                <strong>2 PM</strong>
+                <span>Global Perspectives (G1)</span>
+            </div>
+            <div class="event">
+                <strong>3 PM</strong>
+                <span>Sport (Sports Hall)</span>
+            </div>
+            <div class="event">
+                <strong>4 PM</strong>
+                <span>Digital Game Design</span>
+            </div>
+            <div class="event">
+                <strong>5 PM</strong>
+                <span>Tutor (G2)</span>
+            </div>
+        </div>
+        <!-- Thursday -->
+        <div class="day">
+            <h2>Thursday</h2>
+            <div class="event">
+                <strong>9 AM</strong>
+                <span>Biology (Lab7)</span>
+            </div>
+            <div class="event">
+                <strong>10 AM</strong>
+                <span>Mathematics (114)</span>
+            </div>
+            <div class="event">
+                <strong>11 AM</strong>
+                <span>English (115)</span>
+            </div>
+            <div class="event">
+                <strong>12 PM</strong>
+                <span>Geography (G2)</span>
+            </div>
+            <div class="event">
+                <strong>1 PM</strong>
+                <span>Block 4</span>
+            </div>
+            <div class="event">
+                <strong>2 PM</strong>
+                <span>Sport (Sports)</span>
+            </div>
+            <div class="event">
+                <strong>3 PM</strong>
+                <span>Sport (Sports)</span>
+            </div>
+            <div class="event">
+                <strong>4 PM</strong>
+                <span>Life Skills (209)</span>
+            </div>
+            <div class="event">
+                <strong>5 PM</strong>
+                <span>Digital Game Design (121)</span>
+            </div>
+        </div>
+        <!-- Friday -->
+        <div class="day">
+            <h2>Friday</h2>
+            <div class="event">
+                <strong>9 AM</strong>
+                <span>Mathematics (114)</span>
+            </div>
+            <div class="event">
+                <strong>10 AM</strong>
+                <span>Sport (Sports)</span>
+            </div>
+            <div class="event">
+                <strong>11 AM</strong>
+                <span>Sport (Sports Hall)</span>
+            </div>
+            <div class="event">
+                <strong>12 PM</strong>
+                <span>English (115)</span>
+            </div>
+            <div class="event">
+                <strong>1 PM</strong>
+                <span>Block 4</span>
+            </div>
+            <div class="event">
+                <strong>2 PM</strong>
+                <span>Physics (Lab4)</span>
+            </div>
+            <div class="event">
+                <strong>3 PM</strong>
+                <span>Friday JAW</span>
+            </div>
+            <div class="event">
+                <strong>4 PM</strong>
+                <span>Mathematics (018)</span>
+            </div>
+            <div class="event">
+                <strong>5 PM</strong>
+                <span>Supervised Study (209)</span>
+            </div>
+        </div>
+        <!-- Saturday -->
+        <div class="day">
+            <h2>Saturday</h2>
+            <div class="event">
+                <strong>9 AM</strong>
+                <span>Sport (Sports)</span>
+            </div>
+            <div class="event">
+                <strong>10 AM</strong>
+                <span>Drama (Theatre)</span>
+            </div>
+            <div class="event">
+                <strong>11 AM</strong>
+                <span>Art (Art Studio)</span>
+            </div>
+        </div>
+    </div>
 
-    <h2>My GCSEs</h2>
-    <table style="width:40%">
-        <tr>
-            <th>GCSE</th>
-            <th>Exam Board</th>
-        </tr>
-        <tr>
-            <td>English Language</td>
-            <td>IGCSE</td>
-        </tr>
-        <tr>
-            <td>Chemistry</td>
-            <td>IGCSE</td>
-        </tr>
-        <tr>
-            <td>Biology</td>
-            <td>IGCSE</td>
-        </tr>
-        <tr>
-            <td>Physics</td>
-            <td>IGCSE</td>
-        </tr>
-        <tr>
-            <td>Global Perspective</td>
-            <td>BAC</td>
-        </tr>
-        <tr>
-            <td>Mandarin</td>
-            <td>Unknown</td>
-        </tr>
-        <tr>
-            <td>Digital Game Design</td>
-            <td>BAC</td>
-        </tr>
-        <tr>
-            <td>Computer Science</td>
-            <td>OCR</td>
-        </tr>
-        <tr>
-            <td>Geography</td>
-            <td>BAC</td>
-        </tr>
-    </table>
+    <!-- GCSE Section -->
+    <div class="gcse">
+        <h2>My GCSEs</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Exam Board</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>English Language</td>
+                    <td>IGCSE</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>IGCSE</td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td>IGCSE</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>IGCSE</td>
+                </tr>
+                <tr>
+                    <td>Global Perspective</td>
+                    <td>BAC</td>
+                </tr>
+                <tr>
+                    <td>Mandarin</td>
+                    <td>Unknown</td>
+                </tr>
+                <tr>
+                    <td>Digital Game Design</td>
+                    <td>BAC</td>
+                </tr>
+                <tr>
+                    <td>Computer Science</td>
+                    <td>OCR</td>
+                </tr>
+                <tr>
+                    <td>Geography</td>
+                    <td>BAC</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
